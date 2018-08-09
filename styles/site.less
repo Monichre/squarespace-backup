@@ -17,10 +17,9 @@
 
 
 // =======================================================
-
 //    HTML & Body
 
-// =======================================================
+// ======================================================
 
 [data-ajax-loading] & {
   cursor: progress;
@@ -34,8 +33,8 @@ body {
 
   &.tweak-site-width-option-constrained-width {
 
-    background-color: @tweak-site-body-background-color;
-    .font-smoothing(@tweak-site-body-background-color);
+    // background-color: @tweak-site-body-background-color;
+    // .font-smoothing(@tweak-site-body-background-color);
 
   }
 
@@ -43,14 +42,14 @@ body {
   &.tweak-site-width-option-full-background {
 
     // Full width, get background from site border
-    background-color: @tweak-site-border-color;
-    .font-smoothing(@tweak-site-border-color);
+    // background-color: @tweak-site-border-color;
+    // .font-smoothing(@tweak-site-border-color);
 
     &.tweak-footer-show:not(.tweak-site-border-show) {
 
       // No site border, get background from footer bottom
-      background-color: @tweak-footer-color;
-      .font-smoothing(@tweak-footer-color);
+      // background-color: @tweak-footer-color;
+      // .font-smoothing(@tweak-footer-color);
 
     }
 
@@ -59,9 +58,7 @@ body {
 }
 
 // =======================================================
-
 //    Loader
-
 // =======================================================
 
 .Loader {
@@ -103,54 +100,48 @@ body {
 
 
 // =======================================================
-
 //    Images
-
 // =======================================================
 
 // Hide ImageLoader images prior to being loaded, so you
 // don't see the broken image graphic in some browsers
-img[data-src]:not([src]) {
-  opacity: 0;
-}
+// img[data-src]:not([src]) {
+//   opacity: 0;
+// }
 
 
 // =======================================================
-
 //    Content Colors
-
 // =======================================================
 
 
 
 // -----------------------------------------
-
 //  Headings
+// -----------------------------------------
 
 
 .mixin-template-heading-color (@h1-color, @h2-color, @h3-color) {
 
-  h1 {
-    color: @h1-color;
-    a { .link-style(@h1-color); }
-  }
-  h2 {
-    color: @h2-color;
-    a { .link-style(@h2-color); }
-  }
-  h3 {
-    color: @h3-color;
-    a { .link-style(@h3-color); }
-  }
+  // h1 {
+  //   color: @h1-color;
+  //   a { .link-style(@h1-color); }
+  // }
+  // h2 {
+  //   color: @h2-color;
+  //   a { .link-style(@h2-color); }
+  // }
+  // h3 {
+  //   color: @h3-color;
+  //   a { .link-style(@h3-color); }
+  // }
 
 }
 
 
-
 // -----------------------------------------
-
 //  Links
-
+// -----------------------------------------
 
 .mixin-template-link-color (@color) {
 
@@ -172,12 +163,9 @@ img[data-src]:not([src]) {
 
 }
 
-
-
 // -----------------------------------------
-
 //  Lines
-
+// -----------------------------------------
 
 .mixin-template-line-color (@color) {
 
@@ -193,34 +181,28 @@ img[data-src]:not([src]) {
 }
 
 
-
-
 // =======================================================
-
 //    Typography
-
 // =======================================================
-
-
 
 
 // -----------------------------------------
-
 //  Body Text
-
-body {
-
-  .tweak-body-font;
-  color: @tweak-body-text-color;
-
-}
-
-p {
-
-  &:first-child { margin-top: 0; }
-  &:last-child { margin-bottom: 0; }
-
-}
+// -----------------------------------------
+//
+// body {
+//
+//   .tweak-body-font;
+//   color: @tweak-body-text-color;
+//
+// }
+//
+// p {
+//
+//   &:first-child { margin-top: 0; }
+//   &:last-child { margin-bottom: 0; }
+//
+// }
 
 
 
@@ -228,59 +210,59 @@ p {
 
 //  Headings
 
-.responsive-font-size-h1 {
-  @media screen and (max-width: 640px) {
-    .max-font-size (32px, @tweak-h1-font-font-size, @tweak-h1-font-letter-spacing);
-  }
-}
-.responsive-font-size-h2 {
-  @media screen and (max-width: 640px) {
-    .max-font-size (28px, @tweak-h2-font-font-size, @tweak-h2-font-letter-spacing);
-  }
-}
-.responsive-font-size-h3 {
-  @media screen and (max-width: 640px) {
-    .max-font-size (24px, @tweak-h3-font-font-size, @tweak-h3-font-letter-spacing);
-  }
-}
-
-h1, h2, h3 {
-
-  text-rendering: optimizeLegibility;
-
-  &:first-child { margin-top: 0; }
-  &:last-child { margin-bottom: 0; }
-
-}
-
-h1 {
-
-  .tweak-h1-font;
-  .responsive-font-size-h1;
-
-}
-
-h2 {
-
-  .tweak-h2-font;
-  .responsive-font-size-h2;
-
-}
-
-h3 {
-
-  .tweak-h3-font;
-  .responsive-font-size-h3;
-
-}
-
-h1 + h1, h1 + h2, h1 + h3,
-h2 + h1, h2 + h2, h2 + h3,
-h3 + h1, h3 + h2, h3 + h3 {
-
-  margin-top: 15px;
-
-}
+// .responsive-font-size-h1 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (32px, @tweak-h1-font-font-size, @tweak-h1-font-letter-spacing);
+//   }
+// }
+// .responsive-font-size-h2 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (28px, @tweak-h2-font-font-size, @tweak-h2-font-letter-spacing);
+//   }
+// }
+// .responsive-font-size-h3 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (24px, @tweak-h3-font-font-size, @tweak-h3-font-letter-spacing);
+//   }
+// }
+//
+// h1, h2, h3 {
+//
+//   text-rendering: optimizeLegibility;
+//
+//   &:first-child { margin-top: 0; }
+//   &:last-child { margin-bottom: 0; }
+//
+// }
+//
+// h1 {
+//
+//   .tweak-h1-font;
+//   .responsive-font-size-h1;
+//
+// }
+//
+// h2 {
+//
+//   .tweak-h2-font;
+//   .responsive-font-size-h2;
+//
+// }
+//
+// h3 {
+//
+//   .tweak-h3-font;
+//   .responsive-font-size-h3;
+//
+// }
+//
+// h1 + h1, h1 + h2, h1 + h3,
+// h2 + h1, h2 + h2, h2 + h3,
+// h3 + h1, h3 + h2, h3 + h3 {
+//
+//   margin-top: 15px;
+//
+// }
 
 .mixin-template-heading-color(@tweak-h1-color, @tweak-h2-color, @tweak-h3-color);
 
@@ -290,11 +272,9 @@ h3 + h1, h3 + h2, h3 + h3 {
   }
 }
 
-
-
 // -----------------------------------------
-
 //  Links
+// -----------------------------------------
 
 a {
 
@@ -314,20 +294,15 @@ a {
 .mixin-template-link-color(@tweak-link-color);
 
 
-
 // -----------------------------------------
-
 //  Lines
+// -----------------------------------------
 
 .mixin-template-line-color(@tweak-line-color);
 
 
-
-
 // =======================================================
-
 //    Site
-
 // =======================================================
 
 
@@ -379,28 +354,19 @@ a {
 .Footer-inner,
 .Index-page-content {
 
-  .tweak-site-width-option-full-background & {
-
-    max-width: @tweak-site-width;
-    margin-left: auto; margin-right: auto;
-
-  }
+  // .tweak-site-width-option-full-background & {
+  //
+  //   max-width: @tweak-site-width;
+  //   margin-left: auto; margin-right: auto;
+  //
+  // }
 
 }
 
 
-
-
-
-
-
-
 // =======================================================
-
 //    Parallax
-
 // =======================================================
-
 
 
 .Parallax-host {
@@ -418,7 +384,8 @@ a {
   // pages. Can't apply this to constrained background though
 
   &.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
-    background-color: @tweak-main-background-color !important;
+    // background-color: @tweak-main-background-color !important;
+    // this makes the padding blue
   }
 
   .Index-page--has-image,
@@ -435,7 +402,7 @@ a {
     z-index: -1;
     overflow: hidden;
 
-    background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
+    // background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
 
     [data-parallax-image-wrapper] {
       position: absolute;
@@ -466,22 +433,13 @@ a {
 
 }
 
-
-
-
-
-
 // =======================================================
-
 //    Intro
-
 // =======================================================
-
-
 
 // -----------------------------------------
-
 //  Loading
+// -----------------------------------------
 
 .enable-load-effects {
   .Intro-image {
@@ -504,10 +462,10 @@ a {
   &--has-image {
 
     .font-smoothing(@tweak-overlay-color);
-    background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
+    // background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
 
     // Typography
-    color: @tweak-overlay-body-text-color;
+    // color: @tweak-overlay-body-text-color;
     .mixin-template-heading-color(@tweak-overlay-h1-color, @tweak-overlay-h2-color, @tweak-overlay-h3-color);
     .mixin-template-link-color(@tweak-overlay-link-color);
     .mixin-template-line-color(@tweak-overlay-line-color);
@@ -523,7 +481,7 @@ a {
       width: 100%;
       height: 100%;
 
-      background-color: @tweak-overlay-color;
+      // background-color: @tweak-overlay-color;
     }
 
   }
@@ -579,19 +537,14 @@ a {
 
 
 
-
-
 // =======================================================
-
 //    Main
-
 // =======================================================
 
 
 .Main {
-
-  background-color: @tweak-main-background-color;
-  .font-smoothing(@tweak-main-background-color);
+  // background-color: @tweak-main-background-color;
+  // .font-smoothing(@tweak-main-background-color);
 
 
   &-content {
@@ -607,12 +560,10 @@ a {
 
 
 // -----------------------------------------
-
 //  Content Inset
-
+// -----------------------------------------
 
 // Mixins
-
 .mixin-min-width (@width, @min) when (@width < @min) {
   width: @min;
 }
@@ -665,17 +616,14 @@ a {
 }
 
 
-
 // =======================================================
-
 //    System Overrides
-
 // =======================================================
 
 
 // -----------------------------------------
-
 //  Blog
+// -----------------------------------------
 
 .tweak-blog-list-style-stacked .BlogList-item-excerpt {
 
@@ -693,8 +641,8 @@ a {
 
 
 // -----------------------------------------
-
 //  Album
+// -----------------------------------------
 
 .sqs-audio-playlist {
 
@@ -713,8 +661,8 @@ a {
 
 
 // -----------------------------------------
-
 //  System Share
+// -----------------------------------------
 
 .squarespace-social-buttons.inline-style {
   .link-color(@tweak-link-color);
@@ -726,27 +674,27 @@ a {
 
 
 // -----------------------------------------
-
 //  Blockquote (HTML block)
+// -----------------------------------------
 
 .sqs-block-html,
 .sqs-block-markdown {
 
-  blockquote {
-
-    margin-left: 0;
-    margin-right: 0;
-    border-left: 1px solid #eeeeee;
-    padding-left: 1.618em;
-
-  }
+  // blockquote {
+  //
+  //   margin-left: 0;
+  //   margin-right: 0;
+  //   border-left: 1px solid #eeeeee;
+  //   padding-left: 1.618em;
+  //
+  // }
 
 }
 
 
 // -----------------------------------------
-
 //  Quote Block
+// -----------------------------------------
 
 .mixin-quote-block-alignment {
   .tweak-quote-block-alignment-left & { text-align: left; }
@@ -757,7 +705,7 @@ a {
 .sqs-block-quote {
 
   // Spacing
-  padding-bottom: 0.5em;
+  // padding-bottom: 0.5em;
 
   // Alignment
   .mixin-quote-block-alignment;
@@ -782,8 +730,8 @@ a {
 
 
 // -----------------------------------------
-
 //  Announcement bar
+// -----------------------------------------
 
 .sqs-announcement-bar {
 
@@ -794,10 +742,9 @@ a {
 }
 
 
-
 // -----------------------------------------
-
 //  Mobile Info Bar
+// -----------------------------------------
 
 .sqs-mobile-info-bar {
 
@@ -813,8 +760,8 @@ a {
 
 
 // -----------------------------------------
-
 //  Gallery
+// -----------------------------------------
 
 .enable-load-effects {
   .sqs-system-gallery {
@@ -826,11 +773,9 @@ a {
 }
 
 
-
-
 // -----------------------------------------
-
 //  Cart page
+// -----------------------------------------
 
 .sqs-fullpage-shopping-cart-content > h2 {
   margin-top: 0;
@@ -838,11 +783,9 @@ a {
 
 
 
-
-
 // -----------------------------------------
-
 //  Force full-width spacer blocks on mobile
+// -----------------------------------------
 
 @media only screen and (max-width: 640px) {
   .sqs-layout .sqs-col-12 > .sqs-block-spacer {
@@ -851,12 +794,447 @@ a {
 }
 
 
-
-
+// -----------------------------------------
+//  Fix for Form Block input text in overlay areas
 // -----------------------------------------
 
-//  Fix for Form Block input text in overlay areas
+// .sqs-alternate-block-style-container .sqs-block-form input {
+//   color: #272727;
+// }
 
-.sqs-alternate-block-style-container .sqs-block-form input {
-  color: #272727;
+// -----------------------------------------
+// custom css
+// -----------------------------------------
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  /* color: rgb(37,77,159); */
+  background-color: white;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.button {
+  border: none;
+  background: rgb(99,180,214);
+  padding: 10px 15px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  font-size: 2vmin;
+  text-decoration: none;
+  vertical-align: middle;
+  max-width: max-content;
+  min-width: 150px;
+}
+
+#header-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  z-index: 2000;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: 2vmin;
+  min-height: 10vh;
+}
+
+#header-list-items {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  margin: auto;
+  margin-right: 0;
+}
+
+#header-list-items li {
+  padding-right: 1rem;
+  list-style: none;
+}
+
+#logo-test {
+  height: 10vh;
+}
+
+#post-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: max-content;
+  height: 50vmin;
+}
+
+.post div {
+  height: 30vmin;
+}
+
+.post {
+  // height: 100%;
+  width: 35vw;
+  margin: 1%;
+}
+
+.post h3 {
+  height: max-content;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 1rem;
+  font-size: 2vmin;
+  background-color: white;
+  position: absolute;
+}
+
+#first-blog {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/images/truck.jpg');
+  height: 100%;
+  width: 100%;
+  min-height: 30vh;
+  min-width: 35vw;
+  position: relative;
+}
+
+#second-blog {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/images/food.jpg');
+  height: 100%;
+  width: 100%;
+  min-height: 30vh;
+  min-width: 35vw;
+  position: relative;
+}
+
+#customers-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width:801px) {
+  #customers-container {
+    display: block;
+  }
+
+  .testimonial {
+    margin: auto!important;
+  }
+
+  #post-container {
+    display: block;
+    height: max-content;
+  }
+
+  .post {
+    margin: auto;
+  }
+
+  #first-blog, #second-blog {
+    min-width: 40vw;
+    min-height: 35vh;
+  }
+
+  #first-blog {
+    background-position: bottom;
+  }
+}
+
+
+@media (max-width:1000px) {
+  #header-ul li {
+    margin: auto;
+  }
+}
+
+@media (max-width:680px) {
+  #logo-test {
+    display: none;
+  }
+}
+
+.testimonial {
+  // height: 50vmin;
+  height: min-content;
+  width: 50vmin;
+  margin: 3%;
+  margin-top: 0;
+  padding: 3%;
+  overflow: hidden;
+}
+
+.testimonial div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 60%;
+  width: 60%;
+  margin: auto;
+}
+
+.locals-blurb {
+  height: 40vmin;
+  width: 40vmin;
+  margin: 3%;
+  margin-top: 0;
+  text-align: left;
+}
+
+.locals-blurb div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 60%;
+  width: 60%;
+  margin: auto;
+  padding: 3%;
+}
+
+.locals-blurb i {
+  padding: .2rem;
+}
+
+.locals-blurb h1, .locals-blurb h2, .locals-blurb h3, .locals-blurbs span, .locals-blurb p {
+  margin: auto;
+  padding-left: 20%;
+  font-weight: lighter;
+}
+
+.locals-blurb p:first-of-type {
+  padding-top: 5%;
+}
+
+.locals-blurb h3, .locals-blurb p {
+  font-size: 1.5vmin;
+}
+
+.locals-blurb h2 {
+  font-size: 2vmin;
+}
+
+.locals-blurb h1 {
+  font-size: 2.5vmin;
+}
+
+.one div {
+  min-height: 30vh;
+  width: 100%;
+  margin: auto;
+  background-image: url('../assets/images/customer1.jpg');
+}
+
+.two div {
+  min-height: 30vh;
+  width: 100%;
+  margin: auto;
+  background-image: url('../assets/images/customer2.jpg');
+}
+
+.three div {
+  min-height: 30vh;
+  width: 100%;
+  margin: auto;
+  background-image: url('../assets/images/customer3.jpg');
+}
+
+.four div {
+  background-image: url('../assets/images/local1.jpg');
+}
+
+.five div {
+  background-image: url('../assets/images/local2.jpg');
+}
+
+.six div {
+  background-image: url('../assets/images/local3.jpg');
+}
+
+.testimonial span {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 2vmin;
+}
+
+#locals-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 4vmin;
+}
+
+.profile-blurb {
+  height: 30vmin;
+  width: 30vmin;
+  border: 1px solid black;
+  margin: 3%;
+}
+
+.title {
+  padding: 1rem;
+  width: 90vw;
+  margin: auto;
+  font-size: 3vmin;
+}
+
+#about, #blog, #customers, #search-bar, #locals, #destination {
+  background-color: white;
+}
+
+#about li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 2vmin;
+}
+
+#about div {
+  background-image: url('../assets/images/travel.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 50vmin;
+  width: 90vw;
+  margin: auto;
+}
+
+#about span {
+  background-color: yellow;
+}
+
+#destination {
+  width: 100%;
+}
+
+#destination div {
+  background-image: url('../assets/images/beach.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vmin;
+  width: 90vw;
+  margin: auto;
+}
+
+#destination button {
+  margin: 1rem;
+}
+
+#carousel {
+  background-image: url('../assets/images/mountain.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 2rem;
+  width: 90vw;
+  height: 60vmin;
+  margin: auto;
+}
+
+#carousel h1 {
+  font-size: 4vmin;
+  padding-top: 15vmin;
+}
+
+footer {
+  text-align: right;
+  background-color: #A9B2B7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20vmin;
+  width: 100vw;
+  color: white;
+}
+
+#footer-signup {
+  padding-left: .5rem;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  display: inline;
+  list-style: none;
+  padding: .5rem;
+  font-size: 3vmin;
+}
+
+footer h1 {
+  font-size: 2.5vmin;
+}
+
+#footer-signup h1 {
+  text-align: left;
+}
+
+#footer-contact {
+  padding-right: .5rem;
+}
+
+footer button, footer input {
+  border: none;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5vmin;
+  color: black;
+}
+
+footer button {
+  width: 10vw;
+}
+
+footer input {
+  width: 35vw;
+}
+
+#search-bar button {
+  display: block;
+  margin: auto;
+}
+
+#search-bar {
+  height: max-content;
+  border: 1px solid black;
+  padding: 5vmin;
+}
+
+#search-bar h1 {
+  font-size: 3vmin;
+}
+
+#search-bar input {
+  width: 280px;
+  padding: .5rem;
+  font-size: 1.5vmin;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  box-shadow: 2px 4px rgba(0,0,0,.3);
 }
