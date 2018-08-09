@@ -174,7 +174,7 @@
               </div>
             </section>
 
-            <section id="destination">
+            <!-- <section id="destination">
               <div class="slider">
                 <div class="slides">
                   <div id="slide-13"></div>
@@ -194,7 +194,7 @@
                   <div id="slide-47"></div>
                   <div id="slide-48"></div>
                 </div>
-              </div>
+              </div> -->
               <button class="button"><a href="/trips" target="_blank" class="Header-nav-folder-item">Browse</a></button>
             </section>
 
