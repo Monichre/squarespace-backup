@@ -4,6 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- headline fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+    <!-- secondary fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- default font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     {squarespace-headers}
   </head>
@@ -124,7 +130,7 @@
 
                   <ul id="header-ul">
                     <span>
-                    <li><a href="/" target="_blank" class="Header-nav-folder-item"><img id="logo-test" src="./assets/images/wander_edit.jpg" alt"logo"></a></li>
+                    <li><a href="/" target="_blank" class="Header-nav-folder-item"><img id="red-logo" src="./assets/images/red-logo.png" alt"logo"></a></li>
                     </span>
 
                     <span id="header-list-items">
@@ -158,9 +164,9 @@
             </section>
 
             <section id="about">
-              <h1 class="title">We want you to visit the place you like<br>and that starts with knowing where you want to go and how you want to get there</h1>
+              <h1 class="title">We want to experience your trip like a local<br>That starts by getting to know you</h1>
               <ul>
-                <li>1. fill out a <span>questionaire</span></li>
+                <li>1. fill out a questionaire</li>
                 <li>2. choose a custom daily travel plan</li>
                 <li>3. see the secret places our locals would go to</li>
               </ul>
@@ -181,7 +187,7 @@
                   </div>
                 </div>
               </div>
-              <button class="button"><a href="/blog" target="_blank" class="Header-nav-folder-item">read more</a></button>
+              <a href="https://booking.wanderlike.me/itinerary/build" target="_blank" class="Header-nav-folder-item"><button class="button">read more</button></a>
             </section>
 
             <section>
@@ -203,11 +209,12 @@
             </section>
 
             <div id="search-bar">
-              <h1>Ready to make your trip unique?</h1>
-              <input type="text" name="desination" placeholder="Destination"/>
+              <h1>Want to make your trip unique?</h1>
+              <h1>Get ready to Experience like a local</h1>
+              <!-- <input type="text" name="desination" placeholder="Destination"/>
               <input type="text" name="date" placeholder="Start Date"/>
-              <input type="text" name="drop" placeholder="Dropdown"/>
-              <button class="button">Go</button>
+              <input type="text" name="drop" placeholder="Dropdown"/> -->
+              <button class="button"><a href="https://booking.wanderlike.me/itinerary/build" target="_blank" >Go</a></button>
             </div>
 
             <section id="locals">
@@ -219,29 +226,84 @@
                   <h1>Stefano, 28</h1>
                   <h2>Writer and Editor</h2>
                   <h3>Interests: </h3>
-                  <p><i class="fab fa-pagelines"></i>Outdoors<i class="fas fa-utensils"></i> Food & Dining</p>
+                  <p><img src="./assets/images/outdoors.png" alt="moutains icon"><span>Outdoors</span><img src="./assets/images/food.png" alt="food icon"><span>Food & Dining</span></p>
                 </div>
                 <div class="locals-blurb five">
                   <div></div>
                   <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                  <h1>Claudia, 30</h1>
-                  <h2>Graphic Designer</h2>
+                  <h1>Daniella, 30</h1>
+                  <h2>Travel Writer and Teacher</h2>
                   <h3>Interests: </h3>
-                  <p><i class="fab fa-pagelines"></i>Outdoors<i class="fas fa-swimmer"></i>Beach</p>
+                  <p><img src="./assets/images/outdoors.png" alt="moutains icon"><span>Outdoors</span><img src="./assets/images/beach.png" alt="beach icon"><span>Beach</span></p>
                 </div>
                 <div class="locals-blurb six">
                   <div></div>
                   <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                  <h1>Clemence, 25</h1>
-                  <h2>Creative Stratgist</h2>
+                  <h1>Nico, 25</h1>
+                  <h2>Entrepreneur and Tour Guide</h2>
                   <h3>Interests: </h3>
-                  <p><i class="fas fa-cocktail"></i>Nightlife<i class="fas fa-hotel"></i>Art & Culture</p>
+                  <p><img src="./assets/images/nightlife.png" alt="nightlife icon"><span>Nightlife</span><img src="./assets/images/culture.png" alt="museum icon"><span>Art & Culture</span></p>
                 </div>
               </div>
             </section>
 
             <section id="destination">
-              <div></div>
+              <div class="slider">
+                <div class="slides">
+                  <!-- <div id="slide-2">
+                    <img src="./assets/images/beach.jpg" alt="destination image">
+                  </div> -->
+
+                  <div id="slide-13"></div>
+                  <div id="slide-14"></div>
+                  <div id="slide-15"></div>
+                  <div id="slide-16"></div>
+                  <div id="slide-17"></div>
+                  <div id="slide-18"></div>
+                  <div id="slide-19"></div>
+                  <div id="slide-20"></div>
+                  <div id="slide-21"></div>
+                  <div id="slide-22"></div>
+                  <div id="slide-23"></div>
+                  <div id="slide-24"></div>
+                  <div id="slide-25"></div>
+                  <div id="slide-26"></div>
+                  <div id="slide-27"></div>
+                  <div id="slide-28"></div>
+                  <div id="slide-29"></div>
+                  <div id="slide-30"></div>
+                  <div id="slide-31"></div>
+                  <div id="slide-32"></div>
+                  <!-- <div id="slide-33"></div> -->
+                  <!-- <div id="slide-34"></div> -->
+                  <div id="slide-35"></div>
+                  <div id="slide-36"></div>
+                  <div id="slide-37"></div>
+                  <div id="slide-38"></div>
+                  <div id="slide-39"></div>
+                  <div id="slide-40"></div>
+                  <div id="slide-41"></div>
+                  <div id="slide-42"></div>
+                  <div id="slide-43"></div>
+                  <div id="slide-44"></div>
+                  <div id="slide-45"></div>
+                  <div id="slide-46"></div>
+                  <div id="slide-47"></div>
+                  <div id="slide-48"></div>
+
+                  <div id="slide-1"></div>
+                  <div id="slide-3"></div>
+                  <div id="slide-4"></div>
+                  <div id="slide-5"></div>
+                  <div id="slide-6"></div>
+                  <div id="slide-7"></div>
+                  <div id="slide-8"></div>
+                  <div id="slide-9"></div>
+                  <div id="slide-10"></div>
+                  <div id="slide-11"></div>
+                  <div id="slide-12"></div>
+                </div>
+              </div>
               <button class="button"><a href="/trips" target="_blank" class="Header-nav-folder-item">Browse</a></button>
             </section>
 

@@ -5,7 +5,7 @@
       <a href="/" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
         {.section website}
           {.section logoImageUrl}
-            <img src="../assets/images/wander_edit.jpg" alt="logo"/>
+            <img src="../assets/images/red-logo.png" alt="logo"/>
           {.or}
             {.section siteTitle}{@}{.end}
           {.end}
