@@ -124,7 +124,7 @@
 
                   <ul id="header-ul">
                     <span>
-                    <li><img id="logo-test" src="./assets/images/wander_edit.jpg" alt"logo"></li>
+                    <li><a href="/" target="_blank" class="Header-nav-folder-item"><img id="logo-test" src="./assets/images/wander_edit.jpg" alt"logo"></a></li>
                     </span>
 
                     <span id="header-list-items">
