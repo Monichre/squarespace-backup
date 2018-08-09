@@ -1,6 +1,25 @@
+
+// =======================================================
+// __          __   _       _     _
+// \ \        / /  (_)     | |   | |
+//  \ \  /\  / / __ _  __ _| |__ | |_
+//   \ \/  \/ / '__| |/ _` | '_ \| __|
+//    \  /\  /| |  | | (_| | | | | |_
+//     \/  \/ |_|  |_|\__, |_| |_|\__|
+//                     __/ |
+//                    |___/
+// =======================================================
+
+
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
 }
+
+
+// =======================================================
+//    HTML & Body
+
+// ======================================================
 
 [data-ajax-loading] & {
   cursor: progress;
@@ -9,6 +28,38 @@
 html {
   pointer-events: auto;
 }
+
+body {
+
+  &.tweak-site-width-option-constrained-width {
+
+    // background-color: @tweak-site-body-background-color;
+    // .font-smoothing(@tweak-site-body-background-color);
+
+  }
+
+  &.tweak-site-width-option-full-width,
+  &.tweak-site-width-option-full-background {
+
+    // Full width, get background from site border
+    // background-color: @tweak-site-border-color;
+    // .font-smoothing(@tweak-site-border-color);
+
+    &.tweak-footer-show:not(.tweak-site-border-show) {
+
+      // No site border, get background from footer bottom
+      // background-color: @tweak-footer-color;
+      // .font-smoothing(@tweak-footer-color);
+
+    }
+
+  }
+
+}
+
+// =======================================================
+//    Loader
+// =======================================================
 
 .Loader {
 
@@ -47,6 +98,51 @@ html {
   .animation(anim-opacity-full 480ms ease-out);
 }
 
+
+// =======================================================
+//    Images
+// =======================================================
+
+// Hide ImageLoader images prior to being loaded, so you
+// don't see the broken image graphic in some browsers
+// img[data-src]:not([src]) {
+//   opacity: 0;
+// }
+
+
+// =======================================================
+//    Content Colors
+// =======================================================
+
+
+
+// -----------------------------------------
+//  Headings
+// -----------------------------------------
+
+
+.mixin-template-heading-color (@h1-color, @h2-color, @h3-color) {
+
+  // h1 {
+  //   color: @h1-color;
+  //   a { .link-style(@h1-color); }
+  // }
+  // h2 {
+  //   color: @h2-color;
+  //   a { .link-style(@h2-color); }
+  // }
+  // h3 {
+  //   color: @h3-color;
+  //   a { .link-style(@h3-color); }
+  // }
+
+}
+
+
+// -----------------------------------------
+//  Links
+// -----------------------------------------
+
 .mixin-template-link-color (@color) {
 
   .sqs-block-html,
@@ -67,6 +163,10 @@ html {
 
 }
 
+// -----------------------------------------
+//  Lines
+// -----------------------------------------
+
 .mixin-template-line-color (@color) {
 
   .sqs-block-horizontalrule hr {
@@ -80,6 +180,90 @@ html {
 
 }
 
+
+// =======================================================
+//    Typography
+// =======================================================
+
+
+// -----------------------------------------
+//  Body Text
+// -----------------------------------------
+//
+// body {
+//
+//   .tweak-body-font;
+//   color: @tweak-body-text-color;
+//
+// }
+//
+// p {
+//
+//   &:first-child { margin-top: 0; }
+//   &:last-child { margin-bottom: 0; }
+//
+// }
+
+
+
+// -----------------------------------------
+
+//  Headings
+
+// .responsive-font-size-h1 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (32px, @tweak-h1-font-font-size, @tweak-h1-font-letter-spacing);
+//   }
+// }
+// .responsive-font-size-h2 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (28px, @tweak-h2-font-font-size, @tweak-h2-font-letter-spacing);
+//   }
+// }
+// .responsive-font-size-h3 {
+//   @media screen and (max-width: 640px) {
+//     .max-font-size (24px, @tweak-h3-font-font-size, @tweak-h3-font-letter-spacing);
+//   }
+// }
+//
+// h1, h2, h3 {
+//
+//   text-rendering: optimizeLegibility;
+//
+//   &:first-child { margin-top: 0; }
+//   &:last-child { margin-bottom: 0; }
+//
+// }
+//
+// h1 {
+//
+//   .tweak-h1-font;
+//   .responsive-font-size-h1;
+//
+// }
+//
+// h2 {
+//
+//   .tweak-h2-font;
+//   .responsive-font-size-h2;
+//
+// }
+//
+// h3 {
+//
+//   .tweak-h3-font;
+//   .responsive-font-size-h3;
+//
+// }
+//
+// h1 + h1, h1 + h2, h1 + h3,
+// h2 + h1, h2 + h2, h2 + h3,
+// h3 + h1, h3 + h2, h3 + h3 {
+//
+//   margin-top: 15px;
+//
+// }
+
 .mixin-template-heading-color(@tweak-h1-color, @tweak-h2-color, @tweak-h3-color);
 
 @media screen and (max-width: 640px) {
@@ -88,6 +272,10 @@ html {
   }
 }
 
+// -----------------------------------------
+//  Links
+// -----------------------------------------
+
 a {
 
   color: inherit;
@@ -95,6 +283,8 @@ a {
 
   &:active,
   &:focus {
+
+    // Remove dotted outline
     outline: 0;
 
   }
@@ -103,7 +293,18 @@ a {
 
 .mixin-template-link-color(@tweak-link-color);
 
+
+// -----------------------------------------
+//  Lines
+// -----------------------------------------
+
 .mixin-template-line-color(@tweak-line-color);
+
+
+// =======================================================
+//    Site
+// =======================================================
+
 
 .Site {
 
@@ -118,6 +319,10 @@ a {
     border: @tweak-site-border-width solid @tweak-site-border-color;
     .responsive-border(@tweak-site-border-width);
 
+
+    // Hide border on top/bottom if respective
+    // mobile bar background colors are the same
+    // as border color.
     @media screen and (max-width: @tweak-mobile-breakpoint) {
       .mixin-site-border-mobile-bar-color-top(@tweak-site-border-color, @tweak-mobile-bar-top-background-color);
       .mixin-site-border-mobile-bar-color-bottom(@tweak-site-border-color, @tweak-mobile-bar-bottom-background-color);
@@ -141,12 +346,47 @@ a {
 
 }
 
+
+// Width
+.Header-inner,
+.Intro-content,
+.Main-content,
+.Footer-inner,
+.Index-page-content {
+
+  // .tweak-site-width-option-full-background & {
+  //
+  //   max-width: @tweak-site-width;
+  //   margin-left: auto; margin-right: auto;
+  //
+  // }
+
+}
+
+
+// =======================================================
+//    Parallax
+// =======================================================
+
+
 .Parallax-host {
   display: none;
 }
 
 .tweak-overlay-parallax-enabled {
 
+
+
+  // When parallax scrolling occurs, sometimes, the parallax container will
+  // lag behind the actual scroll, leading to body's color showing through. To
+  // solve this, we change body's background color to main color (color of
+  // Index-page, .Main-content) to make it less noticeable, but only on parallax
+  // pages. Can't apply this to constrained background though
+
+  &.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
+    // background-color: @tweak-main-background-color !important;
+    // this makes the padding blue
+  }
 
   .Index-page--has-image,
   .Intro--has-image {
@@ -161,6 +401,9 @@ a {
     width: 100%;
     z-index: -1;
     overflow: hidden;
+
+    // background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
+
     [data-parallax-image-wrapper] {
       position: absolute;
       top: 0;
@@ -190,6 +433,14 @@ a {
 
 }
 
+// =======================================================
+//    Intro
+// =======================================================
+
+// -----------------------------------------
+//  Loading
+// -----------------------------------------
+
 .enable-load-effects {
   .Intro-image {
     opacity: 0;
@@ -211,6 +462,10 @@ a {
   &--has-image {
 
     .font-smoothing(@tweak-overlay-color);
+    // background-color: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
+
+    // Typography
+    // color: @tweak-overlay-body-text-color;
     .mixin-template-heading-color(@tweak-overlay-h1-color, @tweak-overlay-h2-color, @tweak-overlay-h3-color);
     .mixin-template-link-color(@tweak-overlay-link-color);
     .mixin-template-line-color(@tweak-overlay-line-color);
@@ -225,6 +480,8 @@ a {
 
       width: 100%;
       height: 100%;
+
+      // background-color: @tweak-overlay-color;
     }
 
   }
@@ -247,7 +504,17 @@ a {
   }
 
   &:not(.Intro--has-image) &-content.empty {
+
+    // When there is no image and intro content is empty, .Main-content should
+    // behave as if intro is not there, and have its normal top padding.
+    // However, we don't have a parent selector in CSS, so the .Intro-content
+    // sqs-layout container can't tell its parent that it's empty, meaning
+    // the parent can't tell its sibling. As a workaround, we turn off
+    // padding-bottom on .Intro-content, letting its top padding serve as the
+    // top padding for .Main-content. This works because they share the same
+    // top padding and background color.
     padding-bottom: 0;
+
   }
 
   &-image {
@@ -257,7 +524,8 @@ a {
     left: 0;
     bottom: 0;
     width: 100%;
-    margin: 0;
+
+    margin: 0; // Override
 
   }
 
@@ -267,7 +535,18 @@ a {
   padding-top: 0;
 }
 
+
+
+// =======================================================
+//    Main
+// =======================================================
+
+
 .Main {
+  // background-color: @tweak-main-background-color;
+  // .font-smoothing(@tweak-main-background-color);
+
+
   &-content {
 
     .border-box;
@@ -279,16 +558,30 @@ a {
 
 }
 
+
+// -----------------------------------------
+//  Content Inset
+// -----------------------------------------
+
+// Mixins
 .mixin-min-width (@width, @min) when (@width < @min) {
   width: @min;
 }
 
+// Each column is 8.333% (1/12) of the total width.  A content inset of 1
+// indicates 1 less column on each side, which is (1 - (2 * 0.0833)) as a
+// percentage, and so on.
 @content-inset-width: percentage(1 - (@tweak-main-content-inset * 0.1667));
 .responsive-content-inset-width {
   @media screen and (max-width: 1200px) { .mixin-min-width(@content-inset-width, 66.6667%); }
   @media screen and (max-width: 900px) { .mixin-min-width(@content-inset-width, 83.3333%); }
   @media screen and (max-width: 600px) { .mixin-min-width(@content-inset-width, 100%); }
 }
+
+
+// Selectors below indicate the actual places where content inset is applied,
+// which in this case includes main intros, and all sqs-layouts in main content
+// except for events.
 
 // Intro
 .Intro-content,
@@ -322,8 +615,19 @@ a {
 
 }
 
+
+// =======================================================
+//    System Overrides
+// =======================================================
+
+
+// -----------------------------------------
+//  Blog
+// -----------------------------------------
+
 .tweak-blog-list-style-stacked .BlogList-item-excerpt {
 
+  // Limit excerpt width in stacked mode to content inset width.
   .border-box;
 
   width: @content-inset-width;
@@ -335,12 +639,19 @@ a {
 
 }
 
+
+// -----------------------------------------
+//  Album
+// -----------------------------------------
+
 .sqs-audio-playlist {
 
+  // Spacing
   .album-title,
   .album-artist-name,
   .album-description { margin-bottom: 12px; }
 
+  // Description links
   .album-description a {
     .link-color(@tweak-link-color);
     .link-style(@tweak-link-color);
@@ -348,12 +659,42 @@ a {
 
 }
 
+
+// -----------------------------------------
+//  System Share
+// -----------------------------------------
+
 .squarespace-social-buttons.inline-style {
   .link-color(@tweak-link-color);
   .ss-social-button-icon {
     display: none !important;
   }
 }
+
+
+
+// -----------------------------------------
+//  Blockquote (HTML block)
+// -----------------------------------------
+
+.sqs-block-html,
+.sqs-block-markdown {
+
+  // blockquote {
+  //
+  //   margin-left: 0;
+  //   margin-right: 0;
+  //   border-left: 1px solid #eeeeee;
+  //   padding-left: 1.618em;
+  //
+  // }
+
+}
+
+
+// -----------------------------------------
+//  Quote Block
+// -----------------------------------------
 
 .mixin-quote-block-alignment {
   .tweak-quote-block-alignment-left & { text-align: left; }
@@ -363,21 +704,47 @@ a {
 
 .sqs-block-quote {
 
+  // Spacing
+  // padding-bottom: 0.5em;
+
+  // Alignment
   .mixin-quote-block-alignment;
+
+  // Typography
   .tweak-quote-block-quote-font;
 
+  // Source (byline)
   .source {
+
+    // Spacing
     padding-top: 0.5em;
+
+    // Alignment
     .mixin-quote-block-alignment;
+
+    // Typography
     .tweak-quote-block-source-font;
   }
 
 }
 
+
+// -----------------------------------------
+//  Announcement bar
+// -----------------------------------------
+
 .sqs-announcement-bar {
+
+  // z-index of 1000 won't overlap
+  // the mobile overlay menu.
   z-index: 1000;
 
 }
+
+
+// -----------------------------------------
+//  Mobile Info Bar
+// -----------------------------------------
 
 .sqs-mobile-info-bar {
 
@@ -391,6 +758,11 @@ a {
 
 }
 
+
+// -----------------------------------------
+//  Gallery
+// -----------------------------------------
+
 .enable-load-effects {
   .sqs-system-gallery {
     opacity: 0;
@@ -400,15 +772,39 @@ a {
   }
 }
 
+
+// -----------------------------------------
+//  Cart page
+// -----------------------------------------
+
 .sqs-fullpage-shopping-cart-content > h2 {
   margin-top: 0;
 }
+
+
+
+// -----------------------------------------
+//  Force full-width spacer blocks on mobile
+// -----------------------------------------
 
 @media only screen and (max-width: 640px) {
   .sqs-layout .sqs-col-12 > .sqs-block-spacer {
     display: block;
   }
 }
+
+
+// -----------------------------------------
+//  Fix for Form Block input text in overlay areas
+// -----------------------------------------
+
+// .sqs-alternate-block-style-container .sqs-block-form input {
+//   color: #272727;
+// }
+
+// -----------------------------------------
+// custom css
+// -----------------------------------------
 
 html {
   box-sizing: border-box;
@@ -807,6 +1203,18 @@ ul, li, span, button, input, p {
   transform: scale(0.8);
 }
 
+// if you dont want to do background images
+// .slides img {
+//   object-fit: cover;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: initial;
+//   overflow: hidden;
+// }
+
+
 #slide-13 {
   background-image: url('../assets/peru-final/botesito-paracas-7.jpg');
   background-size: cover;
@@ -856,10 +1264,52 @@ ul, li, span, button, input, p {
   background-repeat: no-repeat;
 }
 
+#slide-12 {
+  background-image: url('../assets/peru-final/las-ballestas.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slide-28 {
+  background-image: url('../assets/peru-final/lauren-solo-huacachina.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slide-29 {
+  background-image: url('../assets/peru-final/laurenview.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slide-31 {
+  background-image: url('../assets/peru-final/laurenwalksunset1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #slide-37 {
   background-image: url('../assets/peru-final/paracas-cliff-landscape.jpg');
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+#slide-38 {
+  background-image: url('../assets/peru-final/paracas-from-above.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+#slide-39 {
+  background-image: url('../assets/peru-final/parcaas-cliff23.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 

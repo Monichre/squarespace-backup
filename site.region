@@ -3,7 +3,6 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- headline fonts -->
     <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
     <!-- secondary fonts -->
@@ -138,9 +137,6 @@
             <div id="search-bar">
               <h1>Want to make your trip unique?</h1>
               <h1>Get ready to Experience like a local</h1>
-              <!-- <input type="text" name="desination" placeholder="Destination"/>
-              <input type="text" name="date" placeholder="Start Date"/>
-              <input type="text" name="drop" placeholder="Dropdown"/> -->
               <button class="button"><a href="https://booking.wanderlike.me/itinerary/build" target="_blank" >Go</a></button>
             </div>
 
@@ -174,7 +170,7 @@
               </div>
             </section>
 
-            <!-- <section id="destination">
+            <section id="destination">
               <div class="slider">
                 <div class="slides">
                   <div id="slide-13"></div>
@@ -194,7 +190,7 @@
                   <div id="slide-47"></div>
                   <div id="slide-48"></div>
                 </div>
-              </div> -->
+              </div>
               <button class="button"><a href="/trips" target="_blank" class="Header-nav-folder-item">Browse</a></button>
             </section>
 
