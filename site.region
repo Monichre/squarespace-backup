@@ -1,0 +1,231 @@
+<!doctype html>
+<html {.if authenticatedAccount}data-authenticated-account{.end}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1">
+    <!-- headline fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+    <!-- secondary fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- default font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes} sqs-has-custom-cart{.if website.logoImageUrl} has-logo-image{.or} has-site-title{.end}{.if website.siteTagLine} has-tagline{.end}{.if website.socialAccounts.0} has-social{.end}{.if showCart} has-cart{.end}{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.repeated section collections}{.background-source-video?} has-parallax-images{.or}{.section mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} has-parallax-images{.or}{.section mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.end} enable-load-effects<squarespace:navigation navigationId="mainNavigation">{.if items.0} has-primary-nav{.end}</squarespace:navigation><squarespace:navigation navigationId="secondaryNavigation">{.if items.0} has-secondary-nav{.end}</squarespace:navigation><squarespace:navigation navigationId="footerMainNavigation">{.if items.0} has-footer-nav{.end}</squarespace:navigation>{.equal? collection.typeName "index"}{.section collection}{.section collections.0}{.equal? typeName "gallery"} has-index-gallery-first{.end}{.end}{.end}{.end}{.if websiteSettings.userAccountsSettings.loginAllowed} has-user-accounts{.end}" data-controller="HashManager, SiteLoader, Mobileclass">
+
+    <div class="Loader"></div>
+
+    {@|apply mobile.block}
+
+    <div class="Site" data-nc-base="header" data-controller="AncillaryLayout">
+
+      <header class="Header Header--top">
+        <div class="Header-inner Header-inner--top" data-nc-group="top">
+          <div data-nc-container="top-center">
+            {.if websiteSettings.userAccountsSettings.loginAllowed}
+              <div class="Header-account" data-nc-element="account" data-controller="UserAccountLink">
+                <button class="user-accounts-text-link">
+                  <span class="unauth">{localizedStrings.signIn}</span>
+                  <span class="auth">{localizedStrings.myAccount}</span>
+                </button>
+                <div class="user-accounts-icon">
+                  {@|apply user-account-icon.block}
+                </div>
+              </div>
+            {.end}
+            {.if website.socialAccounts.0}
+              <div class="Header-social" data-nc-element="social">
+                {@|apply social-links.block}
+              </div>
+            {.end}
+          </div>
+           <div data-nc-container="top-right">
+
+            {@|apply cart.block}
+
+          </div>
+        </div>
+      </header>
+
+      <div class="Site-inner{.equal? collection.typeName "index"} Site-inner--index{.end}"{.equal? collection.typeName "index"}{.section collection}{.section collections.0}{.equal? typeName "page"}{.background-source-video?} data-controller="HeaderOverlay"{.or}{.section mainImage} data-controller="HeaderOverlay"{.end}{.end}{.end}{.equal? typeName "gallery"} data-controller="HeaderOverlay"{.end}{.end}{.end}{.or}{.if item}{.or}{.section collection}{.background-source-video?} data-controller="HeaderOverlay"{.or}{.section mainImage} data-controller="HeaderOverlay"{.end}{.end}{.end}{.end}{.end}>
+
+        <header class="Header Header--bottom{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.section collections.0}{.equal? typeName "page"}{.background-source-video?} Header--overlay{.or}{.section mainImage} Header--overlay{.end}{.end}{.end}{.equal? typeName "gallery"} Header--index-gallery{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} Header--overlay{.or}{.section mainImage} Header--overlay{.end}{.end}{.end}{.end}{.end}">
+          <div class="Header-inner Header-inner--bottom" data-nc-group="bottom">
+            <div data-nc-container="bottom-right">
+
+              <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
+
+                  <ul id="header-ul">
+                    <span>
+                    <li><a href="/" target="_blank" class="Header-nav-folder-item"><img id="red-logo" src="./assets/images/red-logo.png" alt"logo"></a></li>
+                    </span>
+
+                    <span id="header-list-items">
+                    <li><a href="/how-it-works" target="_blank" class="Header-nav-folder-item">How it works</a></li>
+                    <li><a href="/trips" target="_blank" class="Header-nav-folder-item">Destinations</a></li>
+                    <li><a href="/be-a-local" target="_blank" class="Header-nav-folder-item">Become a local</a></li>
+                    <li><a href="/blog" target="_blank" class="Header-nav-folder-item">Blog</a></li>
+                    <li><a href="/" target="_blank" class="Header-nav-folder-item">Sign in</a></li>
+                    <li><a href="/book-an-itinerary-1" target="_blank" class="Header-nav-folder-item button">Get Started</a></li>
+                    </span>
+                  </ul>
+              </nav>
+
+            </div>
+          </div>
+        </header>
+
+        <div class="Content-outer">
+
+
+          <main class="{.equal? collection.typeName "index"}Index{.if collection.collections.0}{.or} Index--empty{.end}{.or}Main{.if collection.typeName} Main--{collection.typeName}{.equal? collection.typeName "page"}{.or}{.if item}-item{.or}-list{.end}{.end}{.end}{.end}" {.equal? collection.typeName "index"}data-collection-id="{collection.id}"{.end}{.equal? collection.typeName "index"} data-controller="IndexFirstSectionHeight, Parallax, IndexNavigation"{.end}>
+            {.equal? collection.typeName "index"}
+            <div id="body-container">
+            <section id="carousel">
+              <h1>Carefully Curated Activities Planned by Locals
+              <br/>
+              <br/>
+              Make your trip special with recommendations you wont find anywhere else</h1>
+            </section>
+
+            <section id="about">
+              <h1 class="title">We want to experience your trip like a local<br>That starts by getting to know you</h1>
+              <ul>
+                <li>1. fill out a questionaire</li>
+                <li>2. choose a custom daily travel plan</li>
+                <li>3. see the secret places our locals would go to</li>
+              </ul>
+              <div></div>
+            </section>
+
+            <section id="blog">
+              <h1 class="title">Recent Blog Posts</h1>
+              <div id="post-container">
+                <div class="post">
+                  <div id="first-blog">
+                    <h3>Wander Icelands Food Trucks</h3>
+                  </div>
+                </div>
+                <div class="post">
+                  <div id="second-blog">
+                    <h3>Puruvian Street Food Crash Course</h3>
+                  </div>
+                </div>
+              </div>
+              <a href="https://booking.wanderlike.me/itinerary/build" target="_blank" class="Header-nav-folder-item"><button class="button">read more</button></a>
+            </section>
+
+            <section>
+              <h1 class="title">What Our travellers say...</h1>
+              <div id="customers-container">
+                <div class="testimonial one">
+                  <div></div>
+                  <p>"Wander was a life saver! They took out all the planning for our honeymoon and siggested amazing lavendar farms in the South of France" <br/><br/> <span>- Diego C</span></p>
+                </div>
+                <div class="testimonial two">
+                  <div></div>
+                  <p>"Wander had great fun facts about Barcelona. Their step by step guide helped us to see more and learn more." <br/><br/> <span>- Harry K</span></p>
+                </div>
+                <div class="testimonial three">
+                  <div></div>
+                  <p>"We are busy people and while we would love to plan, we dont have the time. Wander allowed us to see and experience a lot more than we would have planned on our own." <br/><br/> <span>- Maria A</span></p>
+                </div>
+              </div>
+            </section>
+
+            <div id="search-bar">
+              <h1>Want to make your trip unique?</h1>
+              <h1>Get ready to Experience like a local</h1>
+              <button class="button"><a href="https://booking.wanderlike.me/itinerary/build" target="_blank" >Go</a></button>
+            </div>
+
+            <section id="locals">
+              <h1 class="title">Customized recommendations for travellers from like-minded locals</h1>
+              <div id="locals-container">
+                <div class="locals-blurb four">
+                  <div></div>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                  <h1>Stefano, 28</h1>
+                  <h2>Writer and Editor</h2>
+                  <h3>Interests: </h3>
+                  <p><img src="./assets/images/outdoors.png" alt="moutains icon"><span>Outdoors</span><img src="./assets/images/food.png" alt="food icon"><span>Food & Dining</span></p>
+                </div>
+                <div class="locals-blurb five">
+                  <div></div>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                  <h1>Daniella, 30</h1>
+                  <h2>Travel Writer and Teacher</h2>
+                  <h3>Interests: </h3>
+                  <p><img src="./assets/images/outdoors.png" alt="moutains icon"><span>Outdoors</span><img src="./assets/images/beach.png" alt="beach icon"><span>Beach</span></p>
+                </div>
+                <div class="locals-blurb six">
+                  <div></div>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                  <h1>Nico, 25</h1>
+                  <h2>Entrepreneur and Tour Guide</h2>
+                  <h3>Interests: </h3>
+                  <p><img src="./assets/images/nightlife.png" alt="nightlife icon"><span>Nightlife</span><img src="./assets/images/culture.png" alt="museum icon"><span>Art & Culture</span></p>
+                </div>
+              </div>
+            </section>
+
+            <section id="destination">
+              <div class="slider">
+                <div class="slides">
+                  <div id="slide-13"></div>
+                  <div id="slide-14"></div>
+                  <div id="slide-15"></div>
+                  <div id="slide-16"></div>
+                  <div id="slide-17"></div>
+                  <div id="slide-18"></div>
+                  <div id="slide-21"></div>
+                  <div id="slide-37"></div>
+                  <div id="slide-40"></div>
+                  <div id="slide-41"></div>
+                  <div id="slide-42"></div>
+                  <div id="slide-43"></div>
+                  <div id="slide-44"></div>
+                  <div id="slide-46"></div>
+                  <div id="slide-47"></div>
+                  <div id="slide-48"></div>
+                </div>
+              </div>
+              <button class="button"><a href="/trips" target="_blank" class="Header-nav-folder-item">Browse</a></button>
+            </section>
+
+            <footer>
+              <div id="footer-signup">
+                <h1>Get inspired to explore the world</h1>
+                <input type="text" name="email" placeholder="Enter email to stay informed"/>
+                <button>Sign Up</button>
+              </div>
+              <div id="footer-contact">
+                <h1><a href="/about" target="_blank" class="Header-nav-folder-item">About Lauren</a></h1>
+                <h1><a href="/contact-us" target="_blank" class="Header-nav-folder-item">Contact Us</a></h1>
+                <ul>
+                  <li><a href="https://www.facebook.com/" target="_blank" class="Header-nav-folder-item"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/" target="_blank" class="Header-nav-folder-item"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.vimeo.com/" target="_blank" class="Header-nav-folder-item"><i class="fab fa-vimeo-v"></i></a></li>
+                </ul>
+              </div>
+            </footer>
+            {.or}
+              <section class="Main-content" data-content-field="main-content">
+                {squarespace.main-content}
+              </section>
+            {.end}
+          </div>
+          </main>
+
+        </div>
+      </div>
+
+    </div>
+
+    <squarespace:script src="site-bundle.js" combo="false" />
+
+    {squarespace-footers}
+
+  </body>
+</html>
